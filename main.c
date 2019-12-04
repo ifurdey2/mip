@@ -19,5 +19,30 @@ int main(int argc, const char * argv[]) {
     printf("Cannot open file.\n");
     exit (1);
     }
+    while(!feof (fp)) {
+        fgets(str, 126, fp);
+        fgets(stu, 126, fp);
+    //printf("%s\n", str);
+        while (str[i++]) {
+        if (str[i-1] == 'x' || str[i-1] == 'X') {
+            printf("Precital som X\n");
+            len++;
+        }
+            if (str[i-1]== '$' || str[i-1] == '#' || str[i-1] == '&') {
+                printf("Precital som riadiaci znak\n");
+                len++;
+            }
+            if (str[i-1] == 'y' || str[i-1] == 'Y') {
+            printf("Precital som Y\n");
+                len++;
+            }
+            if (str[i-1] == '*') {
+            printf("Koniec\n");
+            len++;
+            feof;
+                    break;
+            }
+        }
+    }
     return 0;
 }
