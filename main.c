@@ -9,6 +9,15 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    
+    FILE *fp;
+        FILE *f2;
+    char str[128], stu[128];
+        int i = 0, len = 0, j =0, len2= 0;
+        fp = fopen("text.txt", "r");
+        f2 = fopen("cisla.txt", "a");
+    if (fp ==NULL) {
+    printf("Cannot open file.\n");
+    exit (1);
+    }
     return 0;
 }
