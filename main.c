@@ -44,5 +44,29 @@ int main(int argc, const char * argv[]) {
             }
         }
     }
+    while (stu[j++]) {
+        if (stu[j-1] == 'x' || stu[j-1] == 'X') {
+            printf("Sucsess.1\n");
+            len2++;
+        }
+            if (stu[j-1]== '$' || stu[j-1] == '#' || stu[j-1] == '&') {
+                printf("Precital som riadiaci znak\n");
+                len2++;
+            }
+            if (stu[j-1] == 'y' || stu[j-1] == 'Y') {
+            printf("Sucsess3.1\n");
+                len2++;
+            }
+            if (stu[j-1] == '*') {
+            printf("Koniec\n");
+                len2++;
+                feof;
+                fclose(fp);
+                break;
+            }
+        }
+    printf("Pocet precitanych medzier: %i\n", len2+len);
+    fclose(fp);
+    fclose(f2);
     return 0;
 }
